@@ -1,3 +1,5 @@
+import 'package:captain_kim/home.dart';
+import 'package:captain_kim/profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -44,48 +46,55 @@ class History extends StatelessWidget {
                   decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
                 ),
               ),
-              Positioned(
-                left: 33,
-                top: 739,
+               Positioned(
+                left: 0,
+                bottom: 0,
                 child: Container(
-                  width: 45,
-                  height: 45,
+                  width: 360,
+                  height: 67,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/45x45"),
-                      fit: BoxFit.contain,
+                  color: Color(0xFFD9D9D9),
+                  ),
+                  child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    IconButton(
+                    icon: Image.asset("assets/Home_Page.png"),
+                    iconSize: 45,
+                    onPressed: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Home()),
+                        );
+
+                    },
                     ),
+                    IconButton(
+                    icon: Image.asset("assets/Activity_History.png"),
+                    iconSize: 45,
+                    onPressed: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => History()),
+                        );
+
+                    },
+                    ),
+                    IconButton(
+                    icon: Image.asset("assets/Account.png"),
+                    iconSize: 45,
+                    onPressed: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Profile()),
+                        );
+
+                    },
+                    ),
+                  ],
                   ),
                 ),
-              ),
-              Positioned(
-                left: 157,
-                top: 740,
-                child: Container(
-                  width: 45,
-                  height: 45,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/45x45"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
                 ),
-              ),
-              Positioned(
-                left: 281,
-                top: 738,
-                child: Container(
-                  width: 45,
-                  height: 45,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/45x45"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
               Positioned(
                 left: 0,
                 top: 0,

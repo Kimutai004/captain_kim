@@ -1,4 +1,7 @@
+import 'package:captain_kim/Login.dart';
 import 'package:flutter/material.dart';
+
+import 'signup.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
@@ -57,47 +60,33 @@ class Splash extends StatelessWidget {
                   height: 398,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/277x398"),
+                      image: AssetImage("assets/Rectangle_7.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
                 ),
               ),
-              Positioned(
+                Positioned(
                 left: 81,
                 top: 615,
-                child: Container(
+                child: GestureDetector(
+                  onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Signup()),
+                  );
+                  },
+                  child: Container(
                   width: 199,
                   height: 42,
                   decoration: ShapeDecoration(
                     color: Colors.black,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                ),
-              ),
-              Positioned(
-                left: 85,
-                top: 735,
-                child: Container(
-                  width: 199,
-                  height: 42,
-                  decoration: ShapeDecoration(
-                    color: Colors.black,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 85,
-                top: 621,
-                child: SizedBox(
-                  width: 195,
-                  height: 30,
-                  child: Text(
+                  child: Center(
+                    child: Text(
                     'Sign Up',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -107,16 +96,32 @@ class Splash extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       height: 0,
                     ),
+                    ),
+                  ),
                   ),
                 ),
-              ),
-              Positioned(
-                left: 89,
-                top: 741,
-                child: SizedBox(
-                  width: 195,
-                  height: 30,
-                  child: Text(
+                ),
+                Positioned(
+                left: 85,
+                top: 735,
+                child: GestureDetector(
+                  onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
+                  );
+                  },
+                  child: Container(
+                  width: 199,
+                  height: 42,
+                  decoration: ShapeDecoration(
+                    color: Colors.black,
+                    shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
                     'Login',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -126,9 +131,11 @@ class Splash extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       height: 0,
                     ),
+                    ),
+                  ),
                   ),
                 ),
-              ),
+                ),
               Positioned(
                 left: 85,
                 top: 681,

@@ -1,3 +1,5 @@
+import 'package:captain_kim/home.dart';
+import 'package:captain_kim/signup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -112,27 +114,27 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+                Positioned(
                 left: 88,
                 top: 440,
-                child: Container(
+                child: GestureDetector(
+                  onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Home()),
+                  );
+                  },
+                  child: Container(
                   width: 199,
                   height: 42,
                   decoration: ShapeDecoration(
                     color: Colors.black,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                ),
-              ),
-              Positioned(
-                left: 92,
-                top: 446,
-                child: SizedBox(
-                  width: 195,
-                  height: 30,
-                  child: Text(
+                  child: Center(
+                    child: Text(
                     'Login',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -142,30 +144,32 @@ class Login extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       height: 0,
                     ),
+                    ),
+                  ),
                   ),
                 ),
-              ),
-              Positioned(
+                ),
+                Positioned(
                 left: 91,
                 top: 589,
-                child: Container(
+                child: GestureDetector(
+                  onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Signup()),
+                  );
+                  },
+                  child: Container(
                   width: 199,
                   height: 42,
                   decoration: ShapeDecoration(
                     color: Colors.black,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                ),
-              ),
-              Positioned(
-                left: 95,
-                top: 595,
-                child: SizedBox(
-                  width: 195,
-                  height: 30,
-                  child: Text(
+                  child: Center(
+                    child: Text(
                     'Sign Up',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -175,9 +179,11 @@ class Login extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       height: 0,
                     ),
+                    ),
+                  ),
                   ),
                 ),
-              ),
+                ),
               Positioned(
                 left: 91,
                 top: 535,
