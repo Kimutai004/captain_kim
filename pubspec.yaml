@@ -64,6 +64,7 @@ flutter:
     - assets/Activity_History.png
     - assets/Home_Page.png
     - assets/Rectangle_7.png
+    - assets/Notification.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
