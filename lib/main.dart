@@ -17,6 +17,7 @@ class FigmaToCodeApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: ListView(children: [
           Splash(),
