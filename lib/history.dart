@@ -28,13 +28,30 @@ class FigmaToCodeApp extends StatelessWidget {
 class History extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
+    return Scaffold(
+      appBar: AppBar(
+      title: Text('Bet History'),
+      backgroundColor: Color(0xFF3D488E),
+      foregroundColor: Colors.white,
+      centerTitle: true,
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+        },
+
+      ),
+      ),
+      body: Stack(
+        children: [
         Container(
-          width: 360,
+          width: 380,
           height: 800,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFF3D488E)),
+          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
           child: Stack(
             children: [
               Positioned(
@@ -46,85 +63,14 @@ class History extends StatelessWidget {
                   decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
                 ),
               ),
-               Positioned(
-                left: 0,
-                bottom: 0,
-                child: Container(
-                  width: 360,
-                  height: 67,
-                  decoration: BoxDecoration(
-                  color: Color(0xFFD9D9D9),
-                  ),
-                  child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    IconButton(
-                    icon: Image.asset("assets/Home_Page.png"),
-                    iconSize: 45,
-                    onPressed: () {
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Home()),
-                        );
-
-                    },
-                    ),
-                    IconButton(
-                    icon: Image.asset("assets/Activity_History.png"),
-                    iconSize: 45,
-                    onPressed: () {
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => History()),
-                        );
-
-                    },
-                    ),
-                    IconButton(
-                    icon: Image.asset("assets/Account.png"),
-                    iconSize: 45,
-                    onPressed: () {
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Profile()),
-                        );
-
-                    },
-                    ),
-                  ],
-                  ),
-                ),
-                ),
-              Positioned(
-                left: 0,
-                top: 0,
-                child: Container(
-                  width: 360,
-                  height: 67,
-                  decoration: BoxDecoration(color: Colors.white),
-                ),
-              ),
+               
+              
               Positioned(
                 left: 23,
-                top: 21,
-                child: Text(
-                  'Bet History',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 23,
-                top: 89,
+                top: 10,
                 child: Container(
                   width: 83,
-                  height: 26,
+                  height: 35,
                   decoration: ShapeDecoration(
                     color: Color(0xFFD9D9D9),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
@@ -133,7 +79,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 23,
-                top: 89,
+                top: 20,
                 child: SizedBox(
                   width: 55,
                   height: 26,
@@ -152,13 +98,13 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 78,
-                top: 92,
+                top: 18,
                 child: Container(
                   width: 20,
                   height: 20,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/20x20"),
+                      image: AssetImage("assets/Expand_Arrow.png"),
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -166,7 +112,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 23,
-                top: 140,
+                top: 61,
                 child: Container(
                   width: 310,
                   height: 73,
@@ -180,7 +126,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 33,
-                top: 156,
+                top: 77,
                 child: SizedBox(
                   width: 60,
                   height: 20,
@@ -199,7 +145,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 156,
+                top: 77,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -218,7 +164,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 180,
+                top: 101,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -237,7 +183,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 40,
-                top: 183,
+                top: 101,
                 child: Text(
                   '26/9/2024  09:22',
                   textAlign: TextAlign.center,
@@ -252,7 +198,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 23,
-                top: 220,
+                top: 141,
                 child: Container(
                   width: 310,
                   height: 73,
@@ -266,7 +212,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 33,
-                top: 236,
+                top: 157,
                 child: SizedBox(
                   width: 60,
                   height: 20,
@@ -285,7 +231,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 236,
+                top: 157,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -304,7 +250,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 260,
+                top: 181,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -323,7 +269,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 40,
-                top: 263,
+                top: 181,
                 child: Text(
                   '26/9/2024  09:22',
                   textAlign: TextAlign.center,
@@ -338,7 +284,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 23,
-                top: 460,
+                top: 381,
                 child: Container(
                   width: 310,
                   height: 73,
@@ -352,7 +298,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 476,
+                top: 397,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -371,7 +317,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 500,
+                top: 421,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -390,7 +336,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 40,
-                top: 503,
+                top: 421,
                 child: Text(
                   '26/9/2024  09:22',
                   textAlign: TextAlign.center,
@@ -405,7 +351,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 23,
-                top: 540,
+                top: 461,
                 child: Container(
                   width: 310,
                   height: 73,
@@ -419,7 +365,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 556,
+                top: 477,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -438,7 +384,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 580,
+                top: 501,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -457,7 +403,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 40,
-                top: 583,
+                top: 501,
                 child: Text(
                   '26/9/2024  09:22',
                   textAlign: TextAlign.center,
@@ -472,7 +418,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 23,
-                top: 300,
+                top: 221,
                 child: Container(
                   width: 310,
                   height: 73,
@@ -486,7 +432,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 316,
+                top: 237,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -505,7 +451,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 340,
+                top: 261,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -524,7 +470,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 40,
-                top: 343,
+                top: 261,
                 child: Text(
                   '26/9/2024  09:22',
                   textAlign: TextAlign.center,
@@ -539,7 +485,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 23,
-                top: 380,
+                top: 301,
                 child: Container(
                   width: 310,
                   height: 73,
@@ -553,7 +499,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 396,
+                top: 317,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -572,7 +518,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 221,
-                top: 420,
+                top: 341,
                 child: SizedBox(
                   width: 75,
                   height: 20,
@@ -591,7 +537,7 @@ class History extends StatelessWidget {
               ),
               Positioned(
                 left: 40,
-                top: 423,
+                top: 341,
                 child: Text(
                   '26/9/2024  09:22',
                   textAlign: TextAlign.center,
@@ -608,6 +554,49 @@ class History extends StatelessWidget {
           ),
         ),
       ],
+      ),
+    bottomNavigationBar:
+      BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+        icon: Icon(Icons.home),
+        label: 'Home',
+          ),
+          BottomNavigationBarItem(
+        icon: Icon(Icons.history),
+        label: 'History',
+          ),
+          BottomNavigationBarItem(
+        icon: Icon(Icons.person),
+        label: 'Profile',
+          ),
+        ],
+        selectedItemColor: Colors.amber[800],
+        onTap: (index) {
+          switch (index) {
+        case 0:
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+          break;
+        case 1:
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => History()),
+          );
+          break;
+        case 2:
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Profile()),
+          );
+          break;
+          }
+        },
+      ),
     );
+   
+    
   }
 }

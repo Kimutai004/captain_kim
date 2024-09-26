@@ -386,19 +386,41 @@ class Home extends StatelessWidget {
       BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+        icon: Icon(Icons.home),
+        label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.history),
-            label: 'History',
+        icon: Icon(Icons.history),
+        label: 'History',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+        icon: Icon(Icons.person),
+        label: 'Profile',
           ),
         ],
         selectedItemColor: Colors.amber[800],
+        onTap: (index) {
+          switch (index) {
+        case 0:
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+          break;
+        case 1:
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => History()),
+          );
+          break;
+        case 2:
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Profile()),
+          );
+          break;
+          }
+        },
       ),
 
       

@@ -65,6 +65,10 @@ flutter:
     - assets/Home_Page.png
     - assets/Rectangle_7.png
     - assets/Notification.png
+    - assets/Expand_Arrow.png
+    - assets/Test_Account.png
+    - assets/Money_Bag.png
+    - assets/Gift_Card.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
