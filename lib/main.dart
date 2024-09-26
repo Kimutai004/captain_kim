@@ -29,6 +29,7 @@ class FigmaToCodeApp extends StatelessWidget {
 class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return Column(
       children: [
         Container(

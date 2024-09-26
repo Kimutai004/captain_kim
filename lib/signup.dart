@@ -28,10 +28,11 @@ class FigmaToCodeApp extends StatelessWidget {
 class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
+    return Scaffold(
+      body: Stack(
+        children: [
         Container(
-          width: 360,
+          width: 380,
           height: 800,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(color: Color(0xFF4D5FCB)),
@@ -327,6 +328,7 @@ class Signup extends StatelessWidget {
           ),
         ),
       ],
+      ),
     );
   }
 }
