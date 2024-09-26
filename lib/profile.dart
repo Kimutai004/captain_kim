@@ -58,7 +58,7 @@ class Profile extends StatelessWidget {
                   left: 19,
                   top: 107,
                   child: Container(
-                    width: 310,
+                    width: 330,
                     height: 73,
                     decoration: ShapeDecoration(
                       color: Color(0xFFD9D9D9),
@@ -167,7 +167,7 @@ class Profile extends StatelessWidget {
                   left: 14,
                   top: 200,
                   child: Container(
-                    width: 310,
+                    width: 360,
                     height: 213,
                     decoration: ShapeDecoration(
                       color: Color(0xFFD9D9D9),
@@ -177,21 +177,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
-                  left: 156,
-                  top: 256,
-                  child: Text(
-                    '+300',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 12,
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w400,
-                      height: 0,
-                    ),
-                  ),
-                ),
+                
                 Positioned(
                   left: 34,
                   top: 227,
@@ -200,7 +186,7 @@ class Profile extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 12,
+                      fontSize: 14,
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       height: 0,
@@ -215,7 +201,7 @@ class Profile extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 12,
+                      fontSize: 15,
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w700,
                       height: 0,
@@ -252,7 +238,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 91,
-                  top: 256,
+                  top: 263,
                   child: SizedBox(
                     width: 49,
                     height: 25,
@@ -299,7 +285,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 33,
-                  top: 256,
+                  top: 263,
                   child: SizedBox(
                     width: 43,
                     height: 25,
@@ -318,7 +304,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 156,
-                  top: 256,
+                  top: 263,
                   child: SizedBox(
                     width: 48,
                     height: 25,
@@ -337,7 +323,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 215,
-                  top: 256,
+                  top: 263,
                   child: SizedBox(
                     width: 49,
                     height: 25,
@@ -359,7 +345,7 @@ class Profile extends StatelessWidget {
                   top: 296,
                   child: Container(
                     width: 224,
-                    height: 31,
+                    height: 41,
                     decoration: ShapeDecoration(
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
@@ -378,7 +364,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 36,
-                  top: 304,
+                  top: 314,
                   child: Text(
                     'Enter amount to deposit',
                     textAlign: TextAlign.center,
@@ -393,7 +379,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 30,
-                  top: 337,
+                  top: 347,
                   child: Text(
                     'Minimum KES10',
                     textAlign: TextAlign.center,
@@ -408,7 +394,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 30,
-                  top: 362,
+                  top: 372,
                   child: Container(
                     width: 119,
                     height: 29,
@@ -422,7 +408,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 30,
-                  top: 362,
+                  top: 378,
                   child: SizedBox(
                     width: 119,
                     height: 29,
@@ -443,7 +429,7 @@ class Profile extends StatelessWidget {
                   left: 14,
                   top: 439,
                   child: Container(
-                    width: 300,
+                    width: 360,
                     height: 196,
                     decoration: ShapeDecoration(
                       color: Color(0xFFD9D9D9),
@@ -455,9 +441,9 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 35,
-                  top: 533,
+                  top: 543,
                   child: Text(
-                    'minimum: KES50 \nmax: KES300,000',
+                    'minimum: KES50 \n\nmax: KES360,000',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -476,7 +462,7 @@ class Profile extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 12,
+                      fontSize: 14,
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       height: 0,
@@ -503,7 +489,7 @@ class Profile extends StatelessWidget {
                   top: 495,
                   child: Container(
                     width: 224,
-                    height: 31,
+                    height: 41,
                     decoration: ShapeDecoration(
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
@@ -522,7 +508,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 40,
-                  top: 503,
+                  top: 513,
                   child: Text(
                     'Enter amount to withdraw',
                     textAlign: TextAlign.center,
@@ -537,7 +523,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 35,
-                  top: 565,
+                  top: 575,
                   child: Container(
                     width: 119,
                     height: 38,
@@ -551,7 +537,7 @@ class Profile extends StatelessWidget {
                 ),
                 Positioned(
                   left: 35,
-                  top: 565,
+                  top: 585,
                   child: SizedBox(
                     width: 119,
                     height: 38,
@@ -577,7 +563,6 @@ class Profile extends StatelessWidget {
                     decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
                   ),
                 ),
-                
               ],
             ),
           ),
